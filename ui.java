@@ -54,7 +54,10 @@ public void start(){
          String destination = reader.nextLine();
          this.createdFlight = new Flight(this.airplanes.getAirplane(planeID),departure,destination);
          this.flights.add(createdFlight);
-     }
+    }else if(command.equals("3")){
+        System.out.println("Give plane ID: ");
+        String whatPlane = reader.nextLine();
+        System.out.println(this.airplanes.getAirplane(whatPlane).toString());
      else{}
  }
  command = "";
