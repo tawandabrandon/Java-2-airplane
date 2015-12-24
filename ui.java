@@ -54,10 +54,7 @@ public void start(){
          String destination = reader.nextLine();
          this.createdFlight = new Flight(this.airplanes.getAirplane(planeID),departure,destination);
          this.flights.add(createdFlight);
-    }else if(command.equals("3")){
-        System.out.println("Give plane ID: ");
-        String whatPlane = reader.nextLine();
-        System.out.println(this.airplanes.getAirplane(whatPlane).toString());
+    }
      else{}
  }
  command = "";
@@ -76,9 +73,13 @@ while(!(command.equals("x"))){
          this.airplanes.print();
         }else if(command.equals("2")){
          this.flights.print();
-     }if(command.equals("x")){
+     }else if(command.equals("x")){
          break;
-     }
+     }else if(command.equals("3")){
+        System.out.println("Give plane ID: ");
+        String whatPlane = reader.nextLine();
+        System.out.println(this.airplanes.getAirplane(whatPlane).toString());
  }
+}
 }
 }
